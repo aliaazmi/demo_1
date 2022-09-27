@@ -15,14 +15,13 @@ from PIL import Image
 from dash_table import DataTable
 from app import app
 
-
 df = pd.read_csv('https://raw.githubusercontent.com/aliaazmi/colorectal_site/main/Database_Colorectal_cancer3.csv')
 
 # Using direct image file pathhttps://raw.githubusercontent.com/aliaazmi/data_lung_cancer/main/Lung_cancer.csv
-image_path = '/assets/my-image2.jpeg'
+image_path = 'assets/my-image2.jpeg'
 
 # Using Pillow to read the image
-pil_img = Image.open('/assets/my-image2.jpeg')
+pil_img = Image.open('assets/my-image2.jpeg')
 
 
 # Using base64 encoding and decoding
@@ -67,7 +66,7 @@ dr_table = DataTable(columns=columns,
                      )
 fig3 = go.Figure()
 fig3.add_trace(go.Bar(
-    x=['<35', '36-50', '51-65', '65>',],
+    x=['<35', '36-50', '51-65', '65>', ],
     y=[13, 76, 150, 158, ],
     name='Female',
     marker=dict(
@@ -107,16 +106,10 @@ container = html.Div([bar_graph, pie1_graph, dr_table],
                             'gridTemplateColumns': '45vw 55vw',
 
                             'gridTemplateRows': '40vh 95vh',
-                             'columnGap': '2px', })
-
-
+                            'columnGap': '2px', })
 
 layout = html.Div([
     html.H2(title), html.Img(src=pil_img), html.Br(), html.Hr(), html.Br(),
     html.Br(),
     container,
 ])
-
-
-
-

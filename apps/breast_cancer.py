@@ -109,7 +109,6 @@ title = html.H2("Beacon Hospital's Breast Cancer Statistic (2019-2022-August)",
 layout = html.Div([
     html.H2(title), html.H1(''),  html.Br(''), html.Br(), html.Br(''), html.Br(''), html.Br(''), html.Br(''),
      html.Br(''), html.Br(''),  html.Br(''), container,
-
 ])
 
 

@@ -26,6 +26,7 @@ df = pd.read_csv('https://raw.githubusercontent.com/aliaazmi/data/main/Data_base
 
 
 df_filterd2 = df[df['Year'].isin(['FEMALE', 'MALE'])]
+
 fig = px.pie(df_filterd2, values='Count', names='Cancer',
              title='Beacon Hospital Cancer Pt Statistic 2019-2021',
              labels='Cancer', )
