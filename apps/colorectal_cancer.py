@@ -50,8 +50,8 @@ dr_table = DataTable(columns=columns,
                      data=data,
                      sort_action='native',
                      derived_virtual_data=data,
-                     style_table={'minHeight': '60vh',
-                                  'height': '60vh',
+                     style_table={'minHeight': '40vh',
+                                  'height': '40vh',
                                   'overflowY': 'scrool'},
                      style_cell={"whitespace": 'normal',
                                  'height': 'auto',
@@ -99,17 +99,20 @@ pie1_graph = dcc.Graph(figure=fig1,
 bar_graph = dcc.Graph(figure=fig3,
                       style={'gridArea': 'bar'})
 
-dr_table.style = {'gridArea': 'tables'}
-container = html.Div([bar_graph, pie1_graph, dr_table],
-                     style={'display': 'grid',
-                            'gridTemplateAreas': '"tables bar " "pie1 pie1"',
-                            'gridTemplateColumns': '45vw 55vw',
 
-                            'gridTemplateRows': '40vh 95vh',
-                            'columnGap': '2px', })
+container = html.Div([bar_graph, pie1_graph,],
+                     style={'display': 'grid',
+                             'gridTemplateAreas': '"pie1 bar"',
+                            'gridTemplateColumns': '50vw 50vw',
+
+                            'gridTemplateRows': '95vh',
+                             'columnGap': '2px', })
+
 
 layout = html.Div([
-    html.H2(title), html.Img(src=pil_img), html.Br(), html.Hr(), html.Br(),
-    html.Br(),
+    html.H2(title), html.Img(src=pil_img), html.Br(), html.Hr(), html.Br(), html.Br(), html.Br(),
+    html.Br(),  html.Br(),
+    dr_table, html.Br(),  html.Br(),
     container,
 ])
+

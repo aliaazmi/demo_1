@@ -33,10 +33,9 @@ fig = px.pie(df_filterd2, values='Count', names='Cancer',
 fig.update_traces(textposition='inside', textinfo='percent+label+value')
 
 fig2 = px.pie(df, values='Count', names='Cancer',
-              title="Beacon Hospital Cancer Pt Statistic 2019-2022(Overall)",
+              title="Cancer Pt Statistic (Overall)",
               labels='Cancer', color_discrete_sequence=px.colors.sequential.RdPu)
 fig2.update_traces(textposition='inside', textinfo='percent+label+value')
-
 
 df['Year'] = df['Year'].apply(str)
 
@@ -103,7 +102,7 @@ layout = html.Div([
 def interactive_graphing(value_year):
     dff = df[df.Year == value_year]
     fig = px.pie(dff, values='Count', names='Cancer',
-                 title='Beacon Hospital Cancer Pt Statistic - 2019-2022 (July)',
+                 title='Cancer Pt Statistic by Year 2019-2022(July)',
                  labels='Cancer', color_discrete_sequence=px.colors.sequential.Agsunset)
     fig.update_traces(textposition='inside', textinfo='percent+label+value')
     return fig

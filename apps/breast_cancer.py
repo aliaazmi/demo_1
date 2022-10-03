@@ -92,9 +92,9 @@ dr_table.style = {'gridArea': 'tables'}
 container = html.Div([dr_table, bar_graph, pie1_graph, pie2_graph, ],
                      style={'display': 'grid',
                             'gridTemplateAreas': '"tables bar" "pie2 pie1"',
-                            'gridTemplateColumns': '45vw 55vw',
+                            'gridTemplateColumns': '40vw 60vw',
 
-                            'gridTemplateRows': '37vh 95vh',
+                            'gridTemplateRows': '50vh 95vh',
 
                             'columnGap': '2px', })
 
@@ -105,10 +105,11 @@ title = html.H2("Beacon Hospital's Breast Cancer Statistic (2019-2022-August)",
                 },
                 id='dashTitle',
                 className="titles")
-
 layout = html.Div([
-    html.H2(title), html.H1(''),  html.Br(''), html.Br(), html.Br(''), html.Br(''), html.Br(''), html.Br(''),
-     html.Br(''), html.Br(''),  html.Br(''), container,
+    html.H2(title), html.H1(),  html.Br(), html.Br(),
+     html.Br(), html.Br(),  html.Br(''), container,
 ])
+
+
 
 
