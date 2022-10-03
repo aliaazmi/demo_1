@@ -21,7 +21,10 @@ df_filterd1 = df[df['STAGE'].isin(['I', 'II', 'III', 'IV'])]
 fig1 = px.pie(df_filterd1, values='Count', names='STAGE',
               title='<b>Stage (n=893)</b>',
               labels='<b> STAGE </b>', color_discrete_sequence=px.colors.sequential.Purpor)
-fig1.update_traces(textposition='inside', textinfo='percent+label+value', )
+fig1.update_traces(textposition='inside', textinfo='percent+label+value', hole=.4, )
+fig1.update_layout(
+    annotations=[dict(text='<b>Stage<b>', x=0.5, y=0.5, font_size=20, showarrow=False),
+                 ])
 
 columns = [dict(id='Year', name='Year'),
            dict(id='year1', name='Amount of Pt', type='numeric'), ]
@@ -71,15 +74,14 @@ labels = ['TNBC', 'HR-ve/HER2+ve', 'HR+ve/HER2+ve',
 values = [173, 187, 303, 433]
 
 fig7 = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='percent+label+value',
-                              insidetextorientation='radial', hole=.4,
+                              insidetextorientation='radial',
                               marker_colors=px.colors.sequential.Burg)
                        ])
 
 fig7.update_layout(
     title_text="<b>HR/HER2 (n=1096)</b>",
-    # Add annotations in the center of the donut pies.
-    annotations=[dict(text='<b>HR/HER2</b>', x=0.5, y=0.5, font_size=20, showarrow=False),
-                 ])
+
+)
 
 pie1_graph = dcc.Graph(figure=fig7,
                        style={'gridArea': 'pie1'})
@@ -92,7 +94,7 @@ dr_table.style = {'gridArea': 'tables'}
 container = html.Div([dr_table, bar_graph, pie1_graph, pie2_graph, ],
                      style={'display': 'grid',
                             'gridTemplateAreas': '"tables bar" "pie2 pie1"',
-                            'gridTemplateColumns': '40vw 60vw',
+                            'gridTemplateColumns': '45vw 55vw',
 
                             'gridTemplateRows': '50vh 95vh',
 
@@ -105,10 +107,12 @@ title = html.H2("Beacon Hospital's Breast Cancer Statistic (2019-2022-August)",
                 },
                 id='dashTitle',
                 className="titles")
+
 layout = html.Div([
-    html.H2(title), html.H1(),  html.Br(), html.Br(),
-     html.Br(), html.Br(),  html.Br(''), container,
+    html.H2(title), html.H1(''), html.Br(), html.Br(), html.Br(), html.Br(''), container,
+
 ])
+
 
 
 

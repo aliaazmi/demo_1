@@ -50,8 +50,8 @@ dr_table = DataTable(columns=columns,
                      data=data,
                      sort_action='native',
                      derived_virtual_data=data,
-                     style_table={'minHeight': '40vh',
-                                  'height': '40vh',
+                     style_table={'minHeight': '70vh',
+                                  'height': '70vh',
                                   'overflowY': 'scrool'},
                      style_cell={"whitespace": 'normal',
                                  'height': 'auto',
@@ -111,8 +111,8 @@ container = html.Div([bar_graph, pie1_graph,],
 
 layout = html.Div([
     html.H2(title), html.Img(src=pil_img), html.Br(), html.Hr(), html.Br(), html.Br(), html.Br(),
-    html.Br(),  html.Br(),
-    dr_table, html.Br(),  html.Br(),
+    html.Br(),  html.Br(), html.Br(),  html.Br(), html.Br(),  html.Br(),
+    dr_table, html.Br(),  html.Br(), html.Br(),  html.Br(),
     container,
 ])
 
