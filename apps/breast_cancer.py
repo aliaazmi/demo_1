@@ -94,9 +94,9 @@ dr_table.style = {'gridArea': 'tables'}
 container = html.Div([dr_table, bar_graph, pie1_graph, pie2_graph, ],
                      style={'display': 'grid',
                             'gridTemplateAreas': '"tables bar" "pie2 pie1"',
-                            'gridTemplateColumns': '45vw 55vw',
+                            'gridTemplateColumns': '45vw 70vw',
 
-                            'gridTemplateRows': '50vh 95vh',
+                            'gridTemplateRows': '37vh 95vh',
 
                             'columnGap': '2px', })
 
