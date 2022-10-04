@@ -73,7 +73,7 @@ labels = ['TNBC (n=173, 15.8%)', 'HR-ve/HER2+ve (n=187, 17.1%)', 'HR+ve/HER2+ve 
           'HR+ve/HER2-ve (n=433, 39.5%)', ]
 values = [173, 187, 303, 433]
 
-fig7 = go.Figure(data=[go.Pie(values=values, textinfo='label',
+fig7 = go.Figure(data=[go.Pie(labels=labels,values=values, textinfo='label',
                               insidetextorientation='radial',
                               marker_colors=px.colors.sequential.Burg)
                        ])
@@ -96,7 +96,7 @@ container = html.Div([dr_table, bar_graph, pie1_graph, pie2_graph, ],
                             'gridTemplateAreas': '"tables bar" "pie2 pie1"',
                             'gridTemplateColumns': '45vw 70vw',
 
-                            'gridTemplateRows': '40vh 95vh',
+                            'gridTemplateRows': '37vh 95vh',
 
                             'columnGap': '2px', })
 

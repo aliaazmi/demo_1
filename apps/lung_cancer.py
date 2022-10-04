@@ -103,7 +103,7 @@ container = html.Div([dr_table, bar_graph, pie1_graph, pie2_graph],
                             'gridTemplateAreas': '"tables bar" "pie2 pie1"',
                             'gridTemplateColumns': '45vw 55vw',
 
-                            'gridTemplateRows': '40vh 95vh',
+                            'gridTemplateRows': '37vh 95vh',
                            'columnGap': '2px', })
 
 layout = html.Div([title, container])
