@@ -12,10 +12,10 @@ from apps import home, colorectal_cancer,  breast_cancer, lung_cancer
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
     html.Div([
-        dcc.Link('Home|', href='/apps/home'),
-        dcc.Link('Colorectal Cancer|', href='/apps/colorectal_cancer'),
-        dcc.Link('Breast Cancer|', href='/apps/breast_cancer'),
-        dcc.Link('Lung Cancer|', href='/apps/lung_cancer'),
+        dcc.Link('Home| ', href='/apps/home'),
+        dcc.Link('Colorectal Cancer| ', href='/apps/colorectal_cancer'),
+        dcc.Link('Breast Cancer| ', href='/apps/breast_cancer'),
+        dcc.Link('Lung Cancer| ', href='/apps/lung_cancer'),
     ],
         className="row"),
     html.Div(id='page-content', children=[])
