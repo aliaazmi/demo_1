@@ -69,11 +69,11 @@ fig3.add_trace(go.Bar(
 fig3.update_layout(xaxis=dict(title_text='<b>Age</b>'),
                    margin=dict(t=5, b=85), )
 
-labels = ['TNBC', 'HR-ve/HER2+ve', 'HR+ve/HER2+ve',
-          'HR+ve/HER2-ve', ]
+labels = ['TNBC (n=173, 15.8%)', 'HR-ve/HER2+ve (n=187, 17.1%)', 'HR+ve/HER2+ve (n=303, 27.6%)',
+          'HR+ve/HER2-ve (n=433, 39.5%)', ]
 values = [173, 187, 303, 433]
 
-fig7 = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='percent+label+value',
+fig7 = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label',
                               insidetextorientation='radial',
                               marker_colors=px.colors.sequential.Burg)
                        ])
