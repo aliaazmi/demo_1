@@ -31,7 +31,7 @@ def b64_image(image_filename):
     return 'data:image/jpeg;base64,' + base64.b64encode(image).decode('utf-8')
 
 
-title = html.H2("Beacon Hospital's Colorectal Cancer Statistic (2019-2022(August)",
+title = html.H2("Beacon Hospital's Colorectal Cancer Statistic (2019-2022(July)",
                 style={
                     'fontFamily': 'verdana',
                     'textAlign': 'center',
