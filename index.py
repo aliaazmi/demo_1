@@ -29,10 +29,10 @@ def display_page(pathname):
         return home.layout
     if pathname == '/apps/colorectal_cancer':
         return colorectal_cancer.layout
-    if pathname == '/apps/lung_cancer':
-        return lung_cancer.layout
     if pathname == '/apps/breast_cancer':
         return breast_cancer.layout
+    if pathname == '/apps/lung_cancer':
+        return lung_cancer.layout
     else:
         return home.layout
 
