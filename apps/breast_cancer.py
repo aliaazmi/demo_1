@@ -79,7 +79,7 @@ fig7 = go.Figure(data=[go.Pie(labels=labels,values=values, textinfo='percent+lab
                        ])
 
 fig7.update_layout(
-    title_text="<b>HR/HER2 (n=1096)</b>",
+    title_text="<b>HR/HER2 (n=1096)</b>", showlegend=False,
 
 )
 
@@ -112,7 +112,6 @@ layout = html.Div([
     html.H2(title), html.H1(''), html.Br(), html.Br(), html.Br(), html.Br(''), container,
 
 ])
-
 
 
 
