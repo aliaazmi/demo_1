@@ -73,7 +73,7 @@ labels = ['TNBC (n=173, 15.8%)', 'HR-ve/HER2+ve (n=187, 17.1%)', 'HR+ve/HER2+ve 
           'HR+ve/HER2-ve (n=433, 39.5%)', ]
 values = [173, 187, 303, 433]
 
-fig7 = go.Figure(data=[go.Pie(labels=labels,values=values, textinfo='percent+label+value',,
+fig7 = go.Figure(data=[go.Pie(labels=labels,values=values, textinfo='percent+label+value',
                               insidetextorientation='radial',
                               marker_colors=px.colors.sequential.Burg)
                        ])
