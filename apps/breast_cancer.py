@@ -23,7 +23,7 @@ fig1 = px.pie(df_filterd1, values='Count', names='STAGE',
               labels='<b> STAGE </b>', color_discrete_sequence=px.colors.sequential.Purpor)
 fig1.update_traces(textposition='inside', textinfo='percent+label+value', hole=.4, )
 fig1.update_layout(
-    annotations=[dict(text='<b>Stage<b>', x=0.5, y=0.5, font_size=20, showarrow=False),
+    annotations=[dict(text='<b>Stage<b>', x=0.5, y=0.5, font_size=16, showarrow=False),
                  ])
 
 columns = [dict(id='Year', name='Year'),
@@ -69,12 +69,12 @@ fig3.add_trace(go.Bar(
 fig3.update_layout(xaxis=dict(title_text='<b>Age</b>'),
                    margin=dict(t=5, b=85), )
 
-labels = ['TNBC (n=173, 15.8%)', 'HR-ve/HER2+ve (n=187, 17.1%)', 'HR+ve/HER2+ve (n=303, 27.6%)',
-          'HR+ve/HER2-ve (n=433, 39.5%)', ]
+labels = ['TNBC', 'HR-ve/HER2+ve', 'HR+ve/HER2+ve ',
+          'HR+ve/HER2-ve ', ]
 values = [173, 187, 303, 433]
 
 fig7 = go.Figure(data=[go.Pie(labels=labels,values=values, textinfo='percent+label+value',
-                              insidetextorientation='radial',
+                              insidetextorientation='radial', textposition='inside',
                               marker_colors=px.colors.sequential.Burg)
                        ])
 
@@ -112,7 +112,5 @@ layout = html.Div([
     html.H2(title), html.H1(''), html.Br(), html.Br(), html.Br(), html.Br(''), container,
 
 ])
-
-
 
 
