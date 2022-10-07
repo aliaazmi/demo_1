@@ -73,7 +73,7 @@ labels = ['TNBC (n=173, 15.8%)', 'HR-ve/HER2+ve (n=187, 17.1%)', 'HR+ve/HER2+ve 
           'HR+ve/HER2-ve (n=433, 39.5%)', ]
 values = [173, 187, 303, 433]
 
-fig7 = go.Figure(data=[go.Pie(labels=labels,values=values, textinfo='label',
+fig7 = go.Figure(data=[go.Pie(labels=labels,values=values, textinfo='percent+label+value',,
                               insidetextorientation='radial',
                               marker_colors=px.colors.sequential.Burg)
                        ])
@@ -100,7 +100,7 @@ container = html.Div([dr_table, bar_graph, pie1_graph, pie2_graph, ],
 
                             'columnGap': '2px', })
 
-title = html.H2("Beacon Hospital's Breast Cancer Statistic (2019-2022-August)",
+title = html.H2("Beacon Hospital's Breast Cancer Statistic (2019-2022(August)",
                 style={
                     'fontFamily': 'verdana',
                     'textAlign': 'center',

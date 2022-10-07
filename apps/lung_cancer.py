@@ -81,7 +81,7 @@ fig3.add_trace(go.Bar(
 fig3.update_layout(xaxis=dict(title_text='<b>Age</b>'),
                    margin=dict(t=5, b=85))
 
-title = html.H2("Beacon Hospital's Lung Cancer Statistic (2019-2021)",
+title = html.H2("Beacon Hospital's Lung Cancer Statistic (2019-2022(August)",
                 style={
                     'fontFamily': 'verdana',
                     'textAlign': 'center',
